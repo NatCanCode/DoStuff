@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "efe-kurnaz-RnCPiXixooY-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "efe-kurnaz-RnCPiXixooY-unsplash 1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
