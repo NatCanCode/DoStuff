@@ -85,7 +85,7 @@ final class ViewModel: ObservableObject {
                     repeats: false
                 )
 
-        var notification = NotificationManager().scheduleNotification(id: "\(String(describing: task.id))", content: content, trigger: trigger)
+        let notification = NotificationManager().scheduleNotification(id: "\(String(describing: task.id))", content: content, trigger: trigger)
         print(notification)
     }
 
@@ -132,7 +132,7 @@ final class ViewModel: ObservableObject {
     }
 
     func deleteItems(offsets: IndexSet) {
-//        withAnimation {
+        withAnimation {
             offsets.map { taskItems[$0] }.forEach { task in
 //                print("\(String(describing: task.id))")
             NotificationManager().removePendingNotification(id: "\(String(describing: task.id))")
@@ -141,7 +141,7 @@ final class ViewModel: ObservableObject {
 
             offsets.map { taskItems[$0] }.forEach(CoreDataManager.shared.container.viewContext.delete)
             CoreDataManager.shared.saveData()
-//        }
+        }
     }
 
 //    func scheduleNotification(task: TaskItem) {
